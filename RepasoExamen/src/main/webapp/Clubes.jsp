@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Clubes</title>
+<link href="${pageContext.request.contextPath}/css/clubes.css"
+	rel="stylesheet" type="text/css">
 </head>
 <body style="test-align: center;">
 	<h1>Clubes</h1>

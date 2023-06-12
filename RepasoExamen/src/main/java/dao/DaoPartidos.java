@@ -14,7 +14,7 @@ import conexiones.Conexion;
 import entidades.*;
 
 public class DaoPartidos {
-
+//Metodo para los partidos de la jornada
 	public ArrayList<Partidos> encuentros() throws SQLException {
 		ArrayList<Partidos> proximospartidos = new ArrayList<Partidos>();
 		

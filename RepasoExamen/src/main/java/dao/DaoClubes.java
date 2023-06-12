@@ -114,5 +114,49 @@ return	listadoclubes;
 	
 	}
 	
+	//metodo para select de equipos
+	public ArrayList<Clubes> listadoequipos() throws Exception {
+		ArrayList<Clubes> listadoequipos = new ArrayList<>();
+		Conexion conexion = new Conexion(); 
+		Connection con = null;
+		Statement st = null;
+		ResultSet rs = null;
+
+		try {
+			con = conexion.getConexion(); 
+			st = con.createStatement(); 
+			String ordenSQL = "SELECT TEAMID,TEAMNAME\n"
+					+ "FROM TEAMS";
+			rs = st.executeQuery(ordenSQL);
+			while (rs.next()) {
+				Clubes misclubes = new Clubes();
+				
+				misclubes.setTeamId(rs.getInt("TEAMID"));
+				misclubes.setTeamName(rs.getString("TEAMNAME"));
+				listadoequipos.add(misclubes);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+
+		} finally {
+
+			if (rs != null) {
+				rs.close();
+			}
+			if (st != null) {
+				st.close();
+			}
+			if (con != null) {
+				con.close();
+			}
+		}
+		return listadoequipos;
+
+	}
+	
 }
 	

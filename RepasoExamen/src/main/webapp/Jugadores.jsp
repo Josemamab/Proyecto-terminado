@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Jugadores</title>
+<link href="${pageContext.request.contextPath}/css/jugadores.css"
+	rel="stylesheet" type="text/css">
 </head>
 <body>
 	<form action="${pageContext.request.contextPath}/Controlador"

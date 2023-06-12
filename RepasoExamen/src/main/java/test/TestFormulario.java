@@ -12,7 +12,7 @@ public class TestFormulario {
 		DaoFormulario daoformulario = new DaoFormulario();
 		
 		try {
-			daoformulario.iniciosesion("kiko", "kiko");
+			daoformulario.iniciosesion("a", "a");
 		} catch (SQLException e) {
 			System.out.println("error");
 			// TODO Auto-generated catch block
