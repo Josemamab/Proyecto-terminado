@@ -278,12 +278,15 @@ body {
 }
 
 .main-content__left-column {
-	flex: 2;
+  flex: 2;
+  margin-top: 150px; 
 }
 
 .main-content__right-column {
-	flex: 1;
+  flex: 1;
+  margin-top: 150px;
 }
+
 
 .main-content__jornadas {
 	color: #333;
